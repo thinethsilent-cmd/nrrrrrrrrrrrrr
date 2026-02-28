@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVIATOR QUANTUM TACTICAL v2.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col p-4 md:p-8 max-w-2xl mx-auto">
+
+    <!-- Top Navigation -->
+    <div class="flex justify-between items-center mb-8">
+        <span class="status-encrypted text-xs font-bold tracking-widest">CORE ENGINE: ACTIVE</span>
+        <span id="clock" class="clock-display text-lg font-bold">00:00:00</span>
+    </div>
+
+    <!-- Header -->
+    <header class="text-center mb-8">
+        <h1 class="text-5xl font-black tracking-tighter mb-1 text-yellow-500">QUANTUM ANALYZER</h1>
+        <p class="text-yellow-700 font-bold text-sm tracking-widest uppercase">Precision Interval Strategy v2.0</p>
+    </header>
+
+    <!-- Dashboard Card -->
+    <div id="dashCard" class="quantum-card rounded-2xl p-8 mb-8 text-center shadow-2xl">
+        <h2 class="text-yellow-600/60 text-xs font-black tracking-widest uppercase mb-2">Probability Window</h2>
+        <div id="targetTime" class="target-time text-7xl md:text-8xl mb-4">--:--</div>
+        
+        <div class="progress-bar mb-4">
+            <div id="confFill" class="progress-fill" style="width: 0%"></div>
+        </div>
+        
+        <div id="statusText" class="text-yellow-500 font-bold text-sm uppercase tracking-widest">Scanning Market...</div>
+    </div>
+
+    <!-- Input Section -->
+    <div class="bg-yellow-950/20 rounded-xl p-6 mb-8 border border-yellow-900/30">
+        <div class="grid grid-cols-2 gap-4 mb-4">
+            <div>
+                <label class="text-yellow-600 text-[10px] font-bold uppercase block mb-1">Last Hit (HH:MM)</label>
+                <input type="text" id="timeInput" placeholder="14:30" class="w-full p-3 rounded-lg font-mono text-lg">
+            </div>
+            <div>
+                <label class="text-yellow-600 text-[10px] font-bold uppercase block mb-1">Odds (X.XX)</label>
+                <input type="number" id="oddInput" step="0.01" placeholder="5.42" class="w-full p-3 rounded-lg font-mono text-lg">
+            </div>
+        </div>
+        <button id="calculateBtn" class="btn-primary w-full font-black py-4 rounded-lg transition-all active:scale-[0.98] uppercase tracking-tighter text-lg shadow-lg shadow-yellow-900/20">
+            Calculate Quantum Probability
+        </button>
+    </div>
+
+    <!-- Analytics Log -->
+    <div class="flex flex-col flex-grow">
+        <div class="flex justify-between items-end mb-2">
+            <span class="text-yellow-800 text-[10px] font-black uppercase tracking-widest">Historical Analytics</span>
+            <button id="resetBtn" class="text-red-500 text-[10px] font-bold hover:underline">RESET CACHE</button>
+        </div>
+        <div id="console" class="console-list rounded-xl flex-grow">
+            <div class="p-8 text-center text-yellow-900 text-xs italic">Waiting for data telemetry...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

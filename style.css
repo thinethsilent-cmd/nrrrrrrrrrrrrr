@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@500;700&display=swap');
+
+:root {
+    --bg-dark: #0a0a05;
+    --card-bg: #1a1a0e;
+    --accent-yellow: #fbbf24;
+    --accent-green: #10b981;
+    --accent-red: #ef4444;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+.quantum-card {
+    background: var(--card-bg);
+    border: 2px solid var(--accent-yellow);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(251, 191, 36, 0.1);
+}
+
+.status-encrypted, .clock-display {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent-yellow);
+}
+
+.target-time {
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: var(--accent-yellow);
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+}
+
+.console-list {
+    background: #0f0f08;
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #2d2d14;
+}
+
+.console-item {
+    border-bottom: 1px solid #2d2d14;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+input {
+    background: #0f0f08 !important;
+    border: 1px solid #2d2d14 !important;
+    outline: none !important;
+    color: var(--accent-yellow) !important;
+}
+
+input:focus {
+    border-color: var(--accent-yellow) !important;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #2d2d14;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--accent-yellow);
+    transition: width 0.5s ease;
+    box-shadow: 0 0 10px var(--accent-yellow);
+}
+
+.btn-primary {
+    background-color: var(--accent-yellow);
+    color: #000;
+}
+
+.btn-primary:hover {
+    background-color: #fcd34d;
+}
+
+/* Animations */
+.pulse-warning {
+    animation: pulse-amber 2s infinite;
+}
+
+.pulse-execute {
+    animation: pulse-green 1s infinite;
+}
+
+@keyframes pulse-amber {
+    0% { border-color: var(--accent-yellow); box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4); }
+    50% { border-color: #f59e0b; box-shadow: 0 0 20px 0 rgba(251, 191, 36, 0.6); }
+    100% { border-color: var(--accent-yellow); box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4); }
+}
+
+@keyframes pulse-green {
+    0% { border-color: var(--accent-yellow); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+    50% { border-color: var(--accent-green); box-shadow: 0 0 25px 5px rgba(16, 185, 129, 0.7); }
+    100% { border-color: var(--accent-yellow); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+}

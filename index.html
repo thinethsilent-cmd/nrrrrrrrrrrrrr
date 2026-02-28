@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTH | QUANTUM TACTICAL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="lstyle.css">
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div class="auth-card w-full max-w-md rounded-2xl p-8">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-black text-yellow-500 tracking-tighter">QUANTUM ACCESS</h1>
+            <p class="text-yellow-800 text-xs font-bold uppercase tracking-widest mt-2">Authorized Personnel Only</p>
+        </div>
+
+        <form id="loginForm" class="space-y-4">
+            <div>
+                <label class="text-yellow-600 text-[10px] font-bold uppercase block mb-1">Grid ID (Email)</label>
+                <input type="email" id="email" required class="w-full p-4 rounded-lg font-mono">
+            </div>
+            <div>
+                <label class="text-yellow-600 text-[10px] font-bold uppercase block mb-1">Access Key (Password)</label>
+                <input type="password" id="password" required class="w-full p-4 rounded-lg font-mono">
+            </div>
+            <button type="submit" id="authBtn" class="btn-gold w-full py-4 rounded-lg uppercase tracking-tighter text-lg mt-4">
+                Establish Connection
+            </button>
+            <div id="errorMsg" class="text-red-500 text-xs font-bold text-center mt-4 hidden"></div>
+        </form>
+        
+        <div class="mt-8 pt-6 border-t border-yellow-900/30 text-center">
+            <p class="text-yellow-900 text-[10px] uppercase font-bold">System Status: Secure</p>
+        </div>
+    </div>
+
+    <script  src="ammat.js"></script>
+</body>
+</html>
